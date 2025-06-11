@@ -1,5 +1,14 @@
-$bgColor: rgb(61, 25, 221);
+@use 'variaveis';
+@use 'hero';
 
-body {
-    background-color: $bgColor;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: variaveis.$corDeFundo;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }

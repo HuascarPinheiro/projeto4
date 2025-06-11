@@ -1,0 +1,64 @@
+.hero {
+    background-image: url(../imagens/hero/rickandmorty_hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding: 2rem;
+    padding-left: 20vw;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 19.6%), radial-gradient(97.07% 97.07% at 60.4% -13.07%, rgba(0, 0, 0, 0) 56.64%, #000000 100%);
+        z-index: 1;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    color: white;
+    padding: 2rem;
+    align-items: center;
+
+    .hero__content {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__logo {
+        width: 300px;
+        margin-bottom: 1rem;
+        }
+
+        &__info {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        &__button {
+        margin-top: 1.5rem;
+
+        .button {
+            background: white;
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        }
+    }
+}

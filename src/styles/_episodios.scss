@@ -1,0 +1,83 @@
+.episodios {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 0;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+
+        &__titulo {
+            font-size: 2rem;
+        }
+
+        .episodios__dropdown {
+        cursor: pointer;
+        background-color: transparent;
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 0.5rem;
+        font-size: 1rem;
+        }
+    }
+
+    &__lista {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.5rem;
+        padding: 0;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__link {
+            text-decoration: none;
+        }
+
+        &__item {
+            background-color: #111;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            
+            &:hover {
+                transform: scale(1.02);
+        }
+
+        a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            padding-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .episodios__titulo {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem 0;
+        }
+
+        .episodios__descricao {
+            font-size: 0.9rem;
+            color: #ccc;
+            padding: 0 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 4.5em;
+            }
+        }
+    }
+}

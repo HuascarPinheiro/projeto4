@@ -1,0 +1,48 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+    z-index: 2;
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        max-width: 110px;
+        width: 100%;
+        margin: 5px;
+
+        @media (max-width: 768px) {
+            max-width: 64px;
+        }
+    }
+
+    &__links {
+        padding-top: 10px;
+        display: flex;
+
+        @media (max-width: 768px) {
+            padding-top: 0;
+        }
+        
+        &__item {
+            margin: 5px;
+        }
+    }
+
+    .button {
+        height: 50px;
+        text-decoration: none;
+
+        @media (max-width: 768px) {
+            padding: 0.4rem 1rem;
+            
+        }
+    }
+}
